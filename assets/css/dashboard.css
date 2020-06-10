@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background: linear-gradient(30deg, #0087fb, #636363f5);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: initial;
+    background-position: center;
+}
+
+.btn-primary {
+    background: linear-gradient(30deg, #0087fb, #636363f5);
+}
+
+.father {
+    justify-content: center;
+    text-align: -webkit-center;
+    margin: 0 !important;
+}
+
+.children {
+    background: rgba(0, 0, 0, 0.774);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2%;
+}
+
+.icon-children {
+    align-self: center;
+    color: white;
+}
+
+.text-children {
+    color: white;
+    align-self: center;
+}
+
+.foto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.foto img {
+    margin: 10px 0;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}

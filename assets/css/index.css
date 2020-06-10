@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-image: url("../images/1.png");
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: initial;
+    background-position: center;
+}
+.container-login {
+    margin-top: calc(10% - 40px);
+}
+.itens {
+    padding: 0 !important;
+}
+.card {
+    width: 400px;
+    display: flex;
+    margin: auto;
+    padding: 30px;
+}
+.card-head {
+    background-color: #251b1b94 !important;
+    border: none !important;
+}
+.content-head {
+    display: flex;
+    place-content: center;
+}
+.content-head img {
+    filter: invert(1);
+}
+.content-head h1 {
+    width: 135px;
+    align-self: center;
+    color: white;
+}

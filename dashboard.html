@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Track - PAINEL DE CONTROLE</title>
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script>
+        function modal(name) {
+            $(`#${name}`).modal({
+                keyboard: false
+            })
+        }
+        function sair() {
+            var saiu = confirm("Deseja realmente sair?");
+            console.log(saiu);
+            if (saiu == true) {
+                window.location = './index.html';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="father row">
+        <div class="children col-md-3" onclick="modal('atividade')">
+            <i class="icon-children fa fa-flag-checkered fa-3x" aria-hidden="true"></i>
+            <span class="text-children">Atividade</span>
+        </div>
+        <div class="children col-md-3" onclick="modal('atualizarpeso')">
+            <i class="icon-children fa fa-balance-scale fa-3x" aria-hidden="true"></i>
+            <span class="text-children">Pesos</span>
+        </div>
+        <div class="children col-md-3" onclick="modal('novarefeicao')">
+            <i class="icon-children fa fa-cutlery fa-3x"></i>
+            <span class="text-children">Refeições</span>
+        </div>
+        <div class="children col-md-3" onclick="modal('medirpressao')">
+            <i class="icon-children fa fa-heartbeat fa-3x"></i>
+            <span class="text-children">Pressão</span>
+        </div>
+        <div class="children col-md-3" onclick="modal('medirglicose')">
+            <i class="icon-children fa fa-eyedropper fa-3x"></i>
+            <span class="text-children">Glicose</span>
+        </div>
+        <div class="children col-md-3" onclick="modal('medirbatimentos')">
+            <i class="icon-children fa fa-stethoscope fa-3x"></i>
+            <span class="text-children">Batimentos</span>
+        </div>
+        <div class="children col-md-3" onclick="modal('conta')">
+            <i class="icon-children fa fa-user-circle-o fa-3x"></i>
+            <span class="text-children">Conta</span>
+        </div>
+        <div class="children col-md-3" onclick="sair()">
+            <i class="icon-children fa fa-sign-out fa-3x"></i>
+            <span class="text-children">Sair</span>
+        </div>
+
+    </div>
+
+    <!-- Modal Atividades Físicas -->
+    <div class="modal fade" id="atividade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Adicionar prática de atividade física</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="">Digite nome da atividade: </label>
+                    <input type="text" name="text" id="checkbox" placeholder="Nome da atividade física">
+                </div>
+                <div class="modal-body">
+                    <label for="">Digite a distância percorrida: </label>
+                    <input type="text" name="text" id="checkbox" placeholder="Distância Percorrida">
+                </div>
+                <div class="modal-body">
+                    <label for="checkbox">Data: </label>
+                    <input type="date" name="text" id="checkbox" placeholder="Data">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Adicionar prática de atividade
+                        física</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pesos -->
+    <div class="modal fade" id="atualizarpeso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Inserir novo peso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="">Insira novo peso: </label>
+                    <input type="text" name="text" id="checkbox" placeholder="Digite peso medido">
+                </div>
+                <div class="modal-body">
+                    <label for="">Data: </label>
+                    <input type="date" name="text" id="checkbox" placeholder="Data">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Salvar novo peso</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Refeições -->
+    <div class="modal fade" id="novarefeicao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Inserir nova refeição</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="checkbox" name="text" id="checkbox">
+                    <label for="">Café da Manhã </label>
+                    <input type="checkbox" name="text" id="checkbox">
+                    <label for="">Almoço </label>
+                    <input type="checkbox" name="text" id="checkbox">
+                    <label for="">Jantar </label>
+                </div>
+                <div class="modal-body">
+                    <input type="checkbox" name="text" id="checkbox">
+                    <label for="">Lanche Manhã </label>
+                    <input type="checkbox" name="text" id="checkbox">
+                    <label for="">Café da Tarde </label>
+                    <input type="checkbox" name="text" id="checkbox">
+                    <label for="">Lanche </label>
+                    <input type="checkbox" name="text" id="checkbox">
+                    <label for="">Ceia</label>
+                </div>
+                <div class="modal-body">
+                    <label for="">Quantidade Calórica ingerida: </label>
+                    <input type="text" name="text" id="checkbox" placeholder="Digite caloria ingerida">
+                </div>
+                <div class="modal-body">
+                    <label for="">Data: </label>
+                    <input type="date" name="text" id="checkbox" placeholder="Data">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Adicionar refeição
+                        ingerida</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pressão -->
+    <div class="modal fade" id="medirpressao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Inserir pressão arterial</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="">Insira nova pressão arterial: </label>
+                </div>
+                <div class="modal-body">
+                    <input type="number" name="text" id="checkbox" placeholder="number">
+                    <label for=""> / </label>
+                    <input type="number" name="text" id="checkbox" placeholder="number">
+                </div>
+                <div class="modal-body">
+                    <label for="">Data: </label>
+                    <input type="date" name="text" id="checkbox" placeholder="Data">
+                </div>
+                <div class="modal-body">
+                    <label for="">Horário: </label>
+                    <input type="time" name="text" id="checkbox" placeholder="time">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Adicionar pressão
+                        arterial</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Glicose -->
+    <div class="modal fade" id="medirglicose" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Inserir Taxa de glicose</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="">Insira a glicose medida: </label>
+                    <input type="number" name="text" id="checkbox" placeholder="Glicose medida">
+                    <label for=""> mg/dl </label>
+                </div>
+                <div class="modal-body">
+                    <label for="">Data: </label>
+                    <input type="date" name="text" id="checkbox" placeholder="Data">
+                </div>
+                <div class="modal-body">
+                    <label for="">Horário: </label>
+                    <input type="time" name="text" id="checkbox" placeholder="time">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Adicionar glicose medida</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Batimentos -->
+    <div class="modal fade" id="medirbatimentos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Inserir batimentos cardíacos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="">Batimentos cardíacos: </label>
+                    <input type="number" name="text" id="checkbox" placeholder="Selecionar medição">
+                    <label for=""> bpm </label>
+                </div>
+                <div class="modal-body">
+                    <label for="">Data: </label>
+                    <input type="date" name="text" id="checkbox" placeholder="Data">
+                </div>
+                <div class="modal-body">
+                    <label for="">Horário: </label>
+                    <input type="time" name="text" id="checkbox" placeholder="time">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Adicionar batimento
+                        medido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Conta -->
+    <div class="modal fade" id="conta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Perfil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="foto">
+                        <img id="image_canv" src="./assets/images/FOTO 3x4.JPG" class="rotate90" height="10%"
+                            width="10%">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Trocar foto</button>
+                    </div>
+                    <div class="email">
+                        <label for="">E-mail: williankorb@gmail.com</label>
+                        <button type="button" class="btn btn-primary" onclick="modal('trocasenha')">Trocar
+                            senha</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Salvar alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="trocasenha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Trocar a senha</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" placeholder="Digite sua nova senha">
+                    <input type="text" placeholder="Confirme sua nova senha">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Salvar Senha</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/1eaf875f9c.js"></script>
+</body>
+
+</html>
